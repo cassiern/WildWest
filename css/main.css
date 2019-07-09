@@ -1,0 +1,94 @@
+
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+body {
+	background-image: url('https://videohive.img.customer.envatousercontent.com/files/4e69955e-dfa7-40f7-a8fd-714f49ff35f0/inline_image_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=ac90f5ca96537f5f9a326b2a43dec9c3');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+}
+ 
+#firstCowboy {
+  position: relative;
+  width: 5%;
+  height: 10%;
+  display: block;
+
+} 
+
+span.gameOver {
+	color: red;
+	font-size: 25px; 
+	font-style: bold;
+}
+
+header {
+	font-size: 40px;
+	font-family: 'Smokum', cursive;
+	text-align: center;
+	color: white;
+}
+#exampleModalLongTitle {
+	font-family: 'Smokum', cursive;
+	font-size: 40px;
+}
+
+.modal-body {
+	font-family: 'Special Elite', cursive;
+	font-size: 25px;
+}
+.questions {
+	display: none;
+}
+#qTwo {
+	display: none;
+}
+#qThree {
+	display: none;
+}
+#qFour {
+	display: none;
+}
+
+.btn {
+	transform: translate(275%, 400%);
+}
+#start {
+	transform: translate(350%, 400%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
