@@ -42,6 +42,19 @@ header {
 .questions {
 	display: none;
 }
+#qAlt1 {
+	display: none;
+}
+#qAlt2 {
+	display: none;
+}
+#qAlt3 {
+	display: none;
+}
+
+
+
+
 #qTwo {
 	display: none;
 }
@@ -69,6 +82,38 @@ header {
 
 
 
+
+
+
+
+/* percent bar. not working. 
+.percent-count {
+	width: 450px;
+	height: 50px;
+	margin: 100px auto;
+	font-size: 50px;
+	text-align: center;
+	color: white;
+}
+.progress-bar {
+	width: 200px;
+	height: 15px;
+	background-color: #8c8f8c;
+	border-radius: 13px;
+	margin: 10px auto;
+	padding: 3px;
+}
+#progress {
+	width: 196px;
+	height: 10px;
+	border-radius: 11px;
+	background-color: #61bf4e;
+
+}
+*/
+#lifePercentBar {
+	display: none;
+}
 
 
 

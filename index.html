@@ -10,9 +10,22 @@
 	<link href="https://fonts.googleapis.com/css?family=Pangolin|Smokum|Special+Elite&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Pangolin|Special+Elite&display=swap" rel="stylesheet">
+	<style> 
+		
+
+	</style>
+
+
+
 </head>
 
 <body>
+<div id="lifePercentBar">
+	<div id="percentCount" class="percent-count"></div>
+	<div class="progress-bar">
+	<div class="progress" id="progress"></div>
+	</div>
+</div>
 	<header>Welcome to the Wild West!</header>
 
 
@@ -32,8 +45,8 @@
         </button>
       </div>
       <div class="modal-body">
-        Howdy!<br><span id="instructions">Welcome to the Wild West!</span> <br>
-        To stay alive, you'll need to choose the correct answers for survival. Every other question will be a trivia question, get it wrong and <span class="gameOver">game over</span>.<br> Keep watch on your life bar, too! If you don't find civilization before it's out, <span class="gameOver"> game over</span>! 
+        Howdy!<br><span id="instructions">Can you help me get to civilization?</span> <br>
+        I was traveling west when Billy the Kid and his gang robbed me of my horse and possesions.<br>To keep me alive, you'll need to choose the correct answers for survival. Not all questions will be trivia. However, all questions can decide my fate. If incorrect, it will <span class="gameOver">set us on a longer course(more trivia) or game over</span>.<br>But don't worry, you'll have chances to redeem yourself. Keep watch on my life bar, too! You must answer all the questions to find civilization before the life bar is out, or else<span class="gameOver"> game over</span>!<br>Good luck! My life is in your hands.<br> - sincerely,<br>Butch Cassidy
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Got it, thanks!</button>
@@ -47,7 +60,7 @@
 
 
 
-
+<!-- Many trivia questions from: https://play.howstuffworks.com/quiz/survival-skills-quiz -->
 <section class="questions">
 <h4>Question:</h4>
 	
@@ -72,9 +85,36 @@
 		<button class="button" id="wrongYear">1828</button>
 		<button class="button" id="wrongEra">1900's</button>
 	</div>
+	<div id="qFour" display="none">
+		<p>Fwew, all this thinking is making me hungry. Should we hunt for food or eat some berries?
+		<button class="button" id="berries">Eat berries, it's quicker.</button>
+		<button class="button" id="hunt">Hunt. We need to energy boost.</button> 
+	</div>
 
 
 
+
+
+<section class="longer-path">
+		<div id="qAlt1">	
+		<p>Sadly, you picked the wrong number. But no worries, we got time. Should we start walking or stay put?</p>
+		<button class="button" id="stay">Stay put, maybe someone will ride by!</button>
+		<button class="button" id="walk">Let's get going!</button>
+		</div>
+		<div id="qAlt2">
+			<p>You picked the smart choice, let's start walking. If I'm facing the sun at noon, walking towards it will take me in what direction?	
+			</p>
+			<button class="button wrong">North</button>
+			<button class="button" id="south">South</button>
+			<button class="button wrong">East</button>
+			<button class="button wrong">West</button>
+		</div>
+		<div id="qAlt3">
+			<p>Berries it is! But first, which wildberry is safe to eat when ripe and cooked, but can cause nausea when eaten off of the branch?</p>
+			<button class="button wrong">Raspberries</button>
+			<button class="button wrong">Golden Currants</button>
+			<button class="button" id="elderberries">Elderberries</button>
+		</div>
 
 </section>
 
@@ -85,9 +125,8 @@
 
 
 
-
-
-
+<!-- the question section closer --> 
+</section>
 
 
 
