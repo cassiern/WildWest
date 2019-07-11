@@ -8,13 +8,23 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: auto;
+	max-width: 1700px;
+	font-size: calc(12px + 1vw);
+	position: relative;
+	align-content: center;
+
 }
+
  
 #firstCowboy {
-  position: relative;
-  width: 5%;
-  height: 10%;
   display: block;
+  position: absolute;
+  width: 10vw;
+  height: calc(25vw * (9/16));
+  max-height: calc(10em * (9/16));
+  max-width: calc(10em * (9/16));
+  align-content: flex-end;
+  bottom: -320px;
 
 } 
 
@@ -25,11 +35,20 @@ span.gameOver {
 }
 
 header {
-	font-size: 40px;
+	display: block;
+	font-size: calc(20px + 4vw);
 	font-family: 'Smokum', cursive;
 	text-align: center;
 	color: white;
+	transform: translate(48%, 10%);
+	max-width: 45vw;
 }
+h4 {
+	font-size: 35px;
+}
+
+
+/*start page*/
 #exampleModalLongTitle {
 	font-family: 'Smokum', cursive;
 	font-size: 40px;
@@ -38,10 +57,51 @@ header {
 .modal-body {
 	font-family: 'Special Elite', cursive;
 	font-size: 25px;
+	align-content: center;
 }
+
+.btn {
+	font-size: calc(12px + 1vw);
+	transform: translate(180%, 200%);
+	text-align: center;
+	transform: translate(48%, 10%);
+	width: 30vw;
+	padding: 5px;
+
+}
+#start {
+	font-size: calc(12px + 1vw);
+	transform: translate(240%, 200%);
+	text-align: center;
+	margin: 5px 1px;
+	transform: translate(48%, 10%);
+	width: 30vw;
+	padding: 5px;
+
+}
+
+.button {
+	border: 1.5px solid #2a4163;
+	background-color: rgba(255, 255, 255, .7);
+	padding: 5px 8px;
+	border-radius: 14px;
+	font-size: 16px;
+	color: black;
+}
+
+
+/*questions page*/
 .questions {
 	display: none;
+	position: absolute;
+	font-size: calc(16px + 1vw);
+	color: white;
+	text-shadow: -1px 0 #2a4163, 0 1px #2a4163, 1px 0 #2a4163, 0 -1px #2a4163;
+	text-align: center;
+	transform: translate(48%, 10%);
+	width: 50vw;
 }
+
 #qAlt1 {
 	display: none;
 }
@@ -49,6 +109,12 @@ header {
 	display: none;
 }
 #qAlt3 {
+	display: none;
+}
+#qAlt4 {
+	display: none;
+}
+#qAlt5 {
 	display: none;
 }
 
@@ -64,56 +130,57 @@ header {
 #qFour {
 	display: none;
 }
-
-.btn {
-	transform: translate(275%, 400%);
-}
-#start {
-	transform: translate(350%, 400%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* percent bar. not working. 
-.percent-count {
-	width: 450px;
-	height: 50px;
-	margin: 100px auto;
-	font-size: 50px;
-	text-align: center;
-	color: white;
-}
-.progress-bar {
-	width: 200px;
-	height: 15px;
-	background-color: #8c8f8c;
-	border-radius: 13px;
-	margin: 10px auto;
-	padding: 3px;
-}
-#progress {
-	width: 196px;
-	height: 10px;
-	border-radius: 11px;
-	background-color: #61bf4e;
-
-}
-*/
-#lifePercentBar {
+#qFive {
 	display: none;
 }
+
+
+#finalQ {
+	display: none;
+}
+
+#finale {
+	display: none;
+}
+
+
+/*progress bar*/
+
+
+#progress {
+		transform: translate(200%, 60%);
+		width: 22vw;
+}
+
+
+
+
+
+progress[value] {
+	display: none;
+	width: 22vw;
+	height: 20px;
+	background-color: black; 
+	position: absolute;
+	border: 1.5px solid #2a4163;
+
+
+}
+progress[value]::-webkit-progress-bar {
+	background-color: #eee;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+	background-image: -webkit-linear-gradient(top,
+		rgba(255, 255, 255, .25),
+		rgba(0, 0, 0, .25)),
+	-webkit-linear-gradient(right, #19b323, #e81a1a);
+	border-radius: 2px;
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+
 
 
 

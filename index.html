@@ -20,14 +20,18 @@
 </head>
 
 <body>
-<div id="lifePercentBar">
-	<div id="percentCount" class="percent-count"></div>
-	<div class="progress-bar">
-	<div class="progress" id="progress"></div>
-	</div>
-</div>
-	<header>Welcome to the Wild West!</header>
 
+	<header>
+		<h1>Welcome to the Wild West!</h1>
+	<progress id="progress" value="30" max="30">
+	<div pseudo="-webkit-progress-inner-element">
+	<div pseudo="-webkit-progress-bar">
+		<div pseudo="-webkit-progress-value" style="width: 80%;"></div>
+	</div>
+		
+	</div>
+</progress>
+</header>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
@@ -46,7 +50,7 @@
       </div>
       <div class="modal-body">
         Howdy!<br><span id="instructions">Can you help me get to civilization?</span> <br>
-        I was traveling west when Billy the Kid and his gang robbed me of my horse and possesions.<br>To keep me alive, you'll need to choose the correct answers for survival. Not all questions will be trivia. However, all questions can decide my fate. If incorrect, it will <span class="gameOver">set us on a longer course(more trivia) or game over</span>.<br>But don't worry, you'll have chances to redeem yourself. Keep watch on my life bar, too! You must answer all the questions to find civilization before the life bar is out, or else<span class="gameOver"> game over</span>!<br>Good luck! My life is in your hands.<br> - sincerely,<br>Butch Cassidy
+        I was traveling west when Billy the Kid and his gang robbed me of my horse and possesions.<br>To keep me alive, you'll need to choose the correct answers for survival. Not all questions will be trivia. However, all questions can decide my fate. If incorrect, it will <span class="gameOver">set us on a longer course(more trivia) or game over</span>.<br>But don't worry, you'll have chances to redeem yourself. Although, there are more traps the further into the game you get! Keep watch on my life bar, too! You must answer all the questions to find civilization before the life bar is out, or else<span class="gameOver"> game over</span>!<br>Be quick, be careful and good luck! My life is in your hands.<br> - sincerely,<br>Butch Cassidy
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Got it, thanks!</button>
@@ -61,62 +65,90 @@
 
 
 <!-- Many trivia questions from: https://play.howstuffworks.com/quiz/survival-skills-quiz -->
-<section class="questions">
+<div class="questions">
 <h4>Question:</h4>
 	
 	<div id="qOne">	
 		<p>Who was the third president of the United States?</p>
-		<button class="button" id="adams">John Adams</button>
-		<button class="button" id="grant">Ulysses S. Grant</button>
-		<button class="button" id="thomas">Thomas Jefferson</button>
+		<button class="button btn-outline-primary" id="adams">John Adams</button>
+		<button class="button btn-outline-primary" id="grant">Ulysses S. Grant</button>
+		<button class="button btn-outline-primary" id="thomas">Thomas Jefferson</button>
 	</div>
 	
 	<div id="qTwo" display="none">
 		<p>Wow, look! A horse. I wonder what breed it is?<br>
 		What is the fastest horse breed?</p>
-		<button class="button" id='shetland'>Shetland</button>
-		<button class="button" id='thoroHorse'>Thoroughbred</button>
-		<button class="button" id="appaHorse">Appaloosa</button>
+		<button class="button btn-outline-primary" id='shetland'>Shetland</button>
+		<button class="button btn-outline-primary" id='thoroHorse'>Thoroughbred</button>
+		<button class="button btn-outline-primary" id="appaHorse">Appaloosa</button>
 	</div>
 
 	<div id="qThree" display="none">
 		<p>When did the gold rush start?</p>
-		<button class="button" id="goldRushYear">1848</button>
-		<button class="button" id="wrongYear">1828</button>
-		<button class="button" id="wrongEra">1900's</button>
+		<button class="button btn-outline-primary" id="goldRushYear">1848</button>
+		<button class="button btn-outline-primary" id="wrongYear">1828</button>
+		<button class="button btn-outline-primary" id="wrongEra">1900's</button>
 	</div>
 	<div id="qFour" display="none">
 		<p>Fwew, all this thinking is making me hungry. Should we hunt for food or eat some berries?
-		<button class="button" id="berries">Eat berries, it's quicker.</button>
-		<button class="button" id="hunt">Hunt. We need to energy boost.</button> 
+		<button class="button btn-outline-primary" id="berries">Eat berries, it's quicker.</button>
+		<button class="button btn-outline-primary" id="hunt">Hunt. We need to energy boost.</button> 
+	</div>
+	<div id="qFive" display="none">
+		<p>Great! Lets go hunting. Billy the kid took my gun so we'll have to make a snare. Using a simple snare, how can we measure the size of the noose?</p>
+		<button class="button btn-outline-primary" id="rightNoose">One and a half times the size of the animal's head.</button>
+		<button class="buttonbtn-outline-primary" id="smallNoose">The size of the animal's head</button>
+		<button class="button btn-outline-primary" id="bigNoose">Double the size of the animal's foot.</button>
+
+	</div>
+	<div id="finalQ">
+		<p>Look, I see civilization! To enter, I need to state a password. What's the answer to this question? What gun wass the most popular in the Western Era (1865 - 1895)? 
+			<button class="button btn-outline-primary" id="colt">.45 colt</button>
+			<button class="button btn-outline-primary" id="pistol">9mm</button>
+			<button class="button btn-outline-primary" id="rifle">Automatic Rifle</button>
+	</div>
+	<div id="finale" display="none">
+		<h1>YOU MADE IT!</h1>
 	</div>
 
 
 
-
-
-<section class="longer-path">
+<div class="longer-path">
 		<div id="qAlt1">	
-		<p>Sadly, you picked the wrong number. But no worries, we got time. Should we start walking or stay put?</p>
-		<button class="button" id="stay">Stay put, maybe someone will ride by!</button>
-		<button class="button" id="walk">Let's get going!</button>
+		<p>Sadly, you picked the wrong answer. But no worries, we got time. Should we start walking or stay put?</p>
+		<button class="button btn-outline-primary" id="stay">Stay put, maybe someone will ride by!</button>
+		<button class="button btn-outline-primary" id="walk">Let's get going!</button>
 		</div>
 		<div id="qAlt2">
-			<p>You picked the smart choice, let's start walking. If I'm facing the sun at noon, walking towards it will take me in what direction?	
+			<p>If I'm facing the sun at noon, walking towards it will take me in what direction?	
 			</p>
-			<button class="button wrong">North</button>
-			<button class="button" id="south">South</button>
-			<button class="button wrong">East</button>
-			<button class="button wrong">West</button>
+			<button class="button wrong btn-outline-primary">North</button>
+			<button class="button btn-outline-primary" id="south">South</button>
+			<button class="button wrong btn-outline-primary">East</button>
+			<button class="button wrong btn-outline-primary">West</button>
 		</div>
-		<div id="qAlt3">
+		<div id="qAlt3"> <!-- qAlt3 and qAlt4 are switched -->
+			<p> Let's make a fire. Which of the following ways isn't a method to start a fire without a match?</p>
+			<button class="button btn-outline-primary" id="chocolate">Soda can & chocolate</button>
+			<button class="button btn-outline-primary" id="dong">Animal Dong</button>
+			<button class="button btn-outline-primary" id="battery">With a battery</button>
+		</div>
+		<div id="qAlt4">
 			<p>Berries it is! But first, which wildberry is safe to eat when ripe and cooked, but can cause nausea when eaten off of the branch?</p>
-			<button class="button wrong">Raspberries</button>
-			<button class="button wrong">Golden Currants</button>
-			<button class="button" id="elderberries">Elderberries</button>
+			<button class="button btn-outline-primary" id="rasp">Raspberries</button>
+			<button class="button btn-outline-primary" id="gold">Golden Currants</button>
+			<button class="button btn-outline-primary" id="elderberries">Elderberries</button>
+		</div>
+		<div id="qAlt5">
+			<p>Now that I've had some food, I think I'll take a nap. I've heard to avoid sleeping directly on the ground. Know why?</p>
+			<button class="button btn-outline-primary" id="bodyHeat">To keep from loosing body heat.</button>
+			<button class="button btn-outline-primary" id="bugs">To avoid being eaten by bugs.</button>
+			<button class="button btn-outline-primary"  id="uncomfortable">Becuase it's bad for your back.</button>
+
 		</div>
 
-</section>
+
+</div>
 
 
 
@@ -126,7 +158,7 @@
 
 
 <!-- the question section closer --> 
-</section>
+</div>
 
 
 
