@@ -8,25 +8,43 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: auto;
+	max-height: 500px
 	max-width: 1700px;
 	font-size: calc(12px + 1vw);
 	position: relative;
 	align-content: center;
-
+	text-align: center;
 }
+
 
  
 #firstCowboy {
-  display: block;
+  display: none;
   position: absolute;
   width: 10vw;
   height: calc(25vw * (9/16));
   max-height: calc(10em * (9/16));
   max-width: calc(10em * (9/16));
   align-content: flex-end;
-  bottom: -320px;
-
+  bottom: -310px;
+  left: 0px;
+  animation-name: moveAcrossScreen;
+  animation-duration: 30s;
 } 
+
+@keyframes moveAcrossScreen {
+	from{transform: translateX(0)}
+	to{transform: translateX(1100px);}
+}
+
+#town {
+	transform: translateX(600px) translateY(400px) scale(.7);
+	display: none;
+}
+
+
+
+
 
 span.gameOver {
 	color: red;
@@ -56,25 +74,32 @@ h4 {
 
 .modal-body {
 	font-family: 'Special Elite', cursive;
-	font-size: 25px;
+	font-size: 20px;
 	align-content: center;
+	text-align: center;
 }
+.btn.btn-secondary {
+	text-align: center;
+	transform: translate(-1px, 2%);
+}
+
+
 
 .btn {
 	font-size: calc(12px + 1vw);
-	transform: translate(180%, 200%);
+/*	transform: translate(180%, 200%);
 	text-align: center;
-	transform: translate(48%, 10%);
+	transform: translate(48%, 10%);*/
 	width: 30vw;
 	padding: 5px;
 
 }
 #start {
 	font-size: calc(12px + 1vw);
-	transform: translate(240%, 200%);
+/*	transform: translate(240%, 200%);
 	text-align: center;
 	margin: 5px 1px;
-	transform: translate(48%, 10%);
+	transform: translate(48%, 10%);*/
 	width: 30vw;
 	padding: 5px;
 
@@ -139,8 +164,13 @@ h4 {
 	display: none;
 }
 
-#finale {
+.finalBang {
 	display: none;
+	color: black;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 22px;
+	font-weight: bold;
+	background-image: url('https://image.freepik.com/free-vector/western-saloon-background_1308-29053.jpg');
 }
 
 
@@ -179,7 +209,6 @@ progress[value]::-webkit-progress-value {
 	border-radius: 2px;
 	background-size: 35px 20px, 100% 100%, 100% 100%;
 }
-
 
 
 
