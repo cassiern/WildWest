@@ -33,8 +33,8 @@ body {
 } 
 
 @keyframes moveAcrossScreen {
-	from{transform: translateX(0)}
-	to{transform: translateX(1100px);}
+	from{transform: translateX(1px)}
+	to{transform: translateX(1120px);}
 }
 
 #town {
@@ -168,11 +168,20 @@ h4 {
 	display: none;
 	color: black;
 	font-family: 'Gloria Hallelujah', cursive;
-	font-size: 22px;
+	font-size: 30px;
 	font-weight: bold;
-	background-image: url('https://image.freepik.com/free-vector/western-saloon-background_1308-29053.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	max-height: 500px
+	max-width: 1700px;
+	position: relative;
+	align-content: center;
+	text-align: center;
 }
-
+h3 {
+	padding: 50px;
+}
 
 /*progress bar*/
 
