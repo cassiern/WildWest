@@ -240,14 +240,14 @@ $('#playAgain').on('click', function(){
 
 
 
-//answer question correclty, go left, add a second, and alert
+//answer question correctly, go left, add a second, and alert
 function animateLeft(){
 	alert('Correct!')
 	$("#firstCowboy" ).animate({ "left": "-=74px" }, "fast" );
 	progress.value += 1;
 }
 
-//answer question incorreclty, go right, subtrract a second, and alert
+//answer question incorrectly, go right, subtract a second, and alert
 function animateRight(){
 	alert('Oh no! Wrong answer. Try again!')
 	$( "#firstCowboy" ).animate({ "left": "+=36.67px" }, "fast" );
@@ -255,7 +255,7 @@ function animateRight(){
 }
 
 
-//cheching if timer is out
+//checking if timer is out
 function checkVitals(){
 	console.log(`checkVitals function ran vitals are ${progress.value}`);
 	if(progress.value === 0){
