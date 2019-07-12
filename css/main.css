@@ -50,9 +50,6 @@ html {
 }
 
 
-
-
-
 span.gameOver {
 	color: red;
 	font-size: 25px; 
@@ -89,8 +86,6 @@ h4 {
 	text-align: center;
 	transform: translate(-1px, 2%);
 }
-
-
 
 .btn {
 	font-size: calc(12px + 1vw);
@@ -151,8 +146,6 @@ h4 {
 }
 
 
-
-
 #qTwo {
 	display: none;
 }
@@ -194,13 +187,9 @@ h3 {
 
 
 #progress {
-		transform: translate(200%, 60%);
-		width: 22vw;
+	transform: translate(200%, 60%);
+	width: 22vw;
 }
-
-
-
-
 
 progress[value] {
 	display: none;
@@ -219,8 +208,8 @@ progress[value]::-webkit-progress-bar {
 }
 progress[value]::-webkit-progress-value {
 	background-image: -webkit-linear-gradient(top,
-		rgba(255, 255, 255, .25),
-		rgba(0, 0, 0, .25)),
+	rgba(255, 255, 255, .25),
+	rgba(0, 0, 0, .25)),
 	-webkit-linear-gradient(right, #19b323, #e81a1a);
 	border-radius: 2px;
 	background-size: 35px 20px, 100% 100%, 100% 100%;

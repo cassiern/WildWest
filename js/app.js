@@ -49,17 +49,12 @@ $('#thoroHorse').on('click', function(){
 	$('#qThree').css('display','block');
 })
 
-$('#appaHorse').on('click', function(){
+$('.button.btn-outline-secondary.slowHorse').on('click', function(){
 	animateRight();
 	$('#qTwo').css('display','none');
 	$('#qAlt1').css('display','block');
 })
 
-$('#shetland').on('click', function(){
-	animateRight()
-	$('#qTwo').css('display','none');
-	$('#qAlt1').css('display','block');
-})
 //Question Three, right path:
 $('#goldRushYear').on('click', function(){
 	animateLeft();
@@ -67,13 +62,8 @@ $('#goldRushYear').on('click', function(){
 	$('#qFour').css('display','block');
 })
 
-$('#wrongYear').on('click', function(){
-	animateRight()
-	$('#qThree').css('display','none');
-	$('#qAlt2').css('display','block');
-})
 
-$('#wrongEra').on('click', function(){
+$('.button.btn-outline-secondary.wrongYear').on('click', function(){
 	animateRight();
 	$('#qThree').css('display','none');
 	$('#qAlt2').css('display','block');
@@ -99,30 +89,17 @@ $('#rightNoose').click(function(){
 	alert('Correct! You caught a rabbit! Time to eat.')
 	$('#qFive').css('display', 'none')
 	$('#finalQ').css('display', 'block')
-
 })
 
-$('#smallNoose').click(function(){
+$('.button.btn-outline-secondary.wrongNoose').click(function(){
 	alert('Oh no! Butch died due to starvation.')
 	gameOver();
 })
 
-$('#bigNoose').click(function(){
-	alert('Oh no! Butch died due to starvation.');
-	gameOver();
-})
-
-
 
 	//wrong answer, path 2
 		//president question
-$('#adams').on('click', function(){
-	animateRight();
-	$('#qOne').css('display','none');
-	$('#qAlt1').css('display','block');
-})
-
-$('#grant').on('click', function(){
+$('.button.btn-outline-secondary.wrongPres').on('click', function(){
 	animateRight();
 	$('#qOne').css('display','none');
 	$('#qAlt1').css('display','block');
@@ -155,12 +132,7 @@ $('#south').click(function(){
 })
 
 	// berries question
-$('#rasp').click(function(){
-	alert('Sorry, Butch died from a weak stomach!')
-	gameOver()
-})
-
-$('#gold').click(function(){
+$('.button.btn-outline-secondary.badBerries').click(function(){
 	alert('Sorry, Butch died from a weak stomach!')
 	gameOver()
 })
@@ -178,23 +150,13 @@ $('#dong').click(function(){
 	$('#qAlt5').css('display', 'block')
 })
 
-$('#chocolate').click(function(){
-	alert('Sorry, Butch died from the cold!')
-	gameOver()
-})
-
-$('#battery').click(function(){
+$('.button.btn-outline-secondary.noFire').click(function(){
 	alert('Sorry, Butch died from the cold!')
 	gameOver()
 })
 
 	//sleep question
-$('#uncomfortable').click(function(){
-	alert("Sorry, Butch died from hypothermia. Correct answer was to avoid loosing body heat.")
-	gameOver()
-})
-
-$('#bugs').click(function(){
+$('.button.btn-outline-secondary.wrongOne').click(function(){
 	alert("Sorry, Butch died from hypothermia. Correct answer was to avoid loosing body heat.")
 	gameOver()
 })
@@ -214,20 +176,11 @@ $('#colt').click(function(){
 	$('.finalBang').css('display', 'block')
 });
 
-$('#rifle').click(function(){
-	animateRight();
-	$('#finalQ').css('display', 'none')
-	$('#firstBackdrop').css('display', 'none');
-	$('#qOne').css('display', 'block')
-})
-
-$('#pistol').click(function(){
+$('.button.btn-outline-secondary.newGun').click(function(){
 	animateRight();
 	$('#finalQ').css('display', 'none')
 	$('#qOne').css('display', 'block')
 })
-
-
 
 //exit game button
 $('#exitGame').on('click', function(){
