@@ -15,10 +15,14 @@ body {
 	align-content: center;
 	text-align: center;
 }
-
+body, 
+html {
+	min-height: 100%;
+}
 
  
 #firstCowboy {
+  display: flex;
   display: none;
   position: absolute;
   width: 10vw;
@@ -30,6 +34,7 @@ body {
   left: 0px;
   animation-name: moveAcrossScreen;
   animation-duration: 30s;
+  justify-content: flex-end;
 } 
 
 @keyframes moveAcrossScreen {
@@ -38,8 +43,10 @@ body {
 }
 
 #town {
+	display: flex;
 	transform: translateX(600px) translateY(400px) scale(.7);
 	display: none;
+	justify-content: flex-end;
 }
 
 
