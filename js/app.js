@@ -141,31 +141,31 @@ $('#bigNoose').click(function(){
 
 	//wrong answer, path 2
 		//president question
-	$('#adams').on('click', function(){
-		console.log('adams was clicked')
-		alert('Sorry, wrong answer. Thomas Jefferson was the third president.');
-		progress.value -= 1;
-			$( "#firstCowboy" ).animate({ "left": "+=36.67px" }, "fast" );
-		$('#qOne').css('display','none');
-		$('#qAlt1').css('display','block');
+$('#adams').on('click', function(){
+	console.log('adams was clicked')
+	alert('Sorry, wrong answer. Thomas Jefferson was the third president.');
+	progress.value -= 1;
+	$( "#firstCowboy" ).animate({ "left": "+=36.67px" }, "fast" );
+	$('#qOne').css('display','none');
+	$('#qAlt1').css('display','block');
+})
 
-	})
-	$('#grant').on('click', function(){
-		console.log('grant was clicked')
-		alert('Sorry, wrong answer. Thomas Jefferson was the third president.');
-		progress.value -= 1;
-			$( "#firstCowboy" ).animate({ "left": "+=36.67px" }, "fast" );
-		$('#qOne').css('display','none');
-		$('#qAlt1').css('display','block');
-	})
+$('#grant').on('click', function(){
+	console.log('grant was clicked')
+	alert('Sorry, wrong answer. Thomas Jefferson was the third president.');
+	progress.value -= 1;
+	$( "#firstCowboy" ).animate({ "left": "+=36.67px" }, "fast" );
+	$('#qOne').css('display','none');
+	$('#qAlt1').css('display','block');
+})
 
 			//stay or walk question
-	$('#stay').click(function(){
-		
-		alert('Sorry, game over. Not too many travelers out here.');
+$('#stay').click(function(){	
+	alert('Sorry, game over. Not too many travelers out here.');
 		gameOver()
-	})
-	$('#walk').click(function(){
+})
+
+$('#walk').click(function(){
 		$("#firstCowboy" ).animate({ "left": "-=74px" }, "fast" );
 		$('#qAlt1').css('display', 'none')
 		$('#qAlt2').css('display', 'block');
